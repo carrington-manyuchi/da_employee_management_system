@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    axios.post('http://localhost:3000/auth/adminlogin')
+    axios.post('http://localhost:3000/auth/adminlogin', values)
     .then(result => console.log(result))
     .catch(err => console.log(err))
   }
@@ -20,7 +20,7 @@ const Login = () => {
     <div className='d-flex justify-content-center align-items-center vh-100 loginPage'>
        <div className='p-3 rounded  border loginForm'>
         <h2 className='text-center mb-4'>DA Login Page</h2>
-        <form action="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div className='mb-3'> 
                 <label htmlFor="email">Email:</label>
                 <input type="email" name="email" autoComplete='off' placeholder='enter email' 
