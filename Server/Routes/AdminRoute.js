@@ -17,6 +17,10 @@ router.post("/adminlogin", (req, res) => {
           expiresIn: "1d",
         }
       );
+      res.cookie("token", token);
+      return res.json({ loginStatus: true });
+    } else {
+      return res.json({ loginStatus: false, Error: "Wrong email or password" });
     }
   });
 });
