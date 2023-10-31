@@ -1,4 +1,4 @@
-import mysql, { createConnection } from "mysql";
+import mysql from "mysql";
 
 const con = mysql.createConnection({
   host: "localhost",
@@ -7,11 +7,11 @@ const con = mysql.createConnection({
   database: "employees",
 });
 
-con.createConnection(function (err) {
+con.connect(function (err) {
   if (err) {
     console.log("connection error");
   } else {
-    console.log("connected");
+    console.log("Connected");
   }
 });
 
