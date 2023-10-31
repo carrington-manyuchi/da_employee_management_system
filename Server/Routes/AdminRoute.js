@@ -25,4 +25,4 @@ router.post("/adminlogin", (req, res) => {
   });
 });
 
-export { router as adminlogin };
+export { router as adminRouter };
